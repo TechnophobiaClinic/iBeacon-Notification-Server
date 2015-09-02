@@ -9,4 +9,4 @@ iPhone & Android 모바일 운영체제에서 iBeacon에 진입하였을 때 maj
 
  - major, minor 값에 따른 기본 Notification 기능
  - Notification과 Database 제어 및 관리 기능
- - 공간서비스를 제공하는 업주들이 개별적으로 Notification 송신 기능
+ - 공간서비스를 제공하는 업주들의 개별적인 Notification 송신 기능
