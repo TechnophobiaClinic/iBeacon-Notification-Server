@@ -1,5 +1,11 @@
-var http = require("http");
+var https = require('https');
+var express = require('express');
+var fs = require('fs');
+
 var url = require("url");
+
+
+
 
 function start(route, handle) {
   function onRequest(request, response) {
@@ -21,8 +27,16 @@ function start(route, handle) {
 
   }
 
-  http.createServer(onRequest).listen(8888);
-  console.log("Server has started.");
+ // http.createServer(onRequest).listen(8888);
+  //console.log("Server has started.");
+  
+  var options = {
+		    key: fs.readFileSync('key.pem'),
+		    cert: fs.readFileSync('cert.pem')
+		};
+  
+
+  https.createServer(options, onRequest).listen(8000);
 }
 
 exports.start = start;
